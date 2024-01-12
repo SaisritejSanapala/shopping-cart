@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div id="products" class="products">
+    <h1>Our Products</h1>
+    <ul id="productsList" class="product-list ">
+    </ul>
+  </div>
+
+  <hr />
+
+  <div id="cart">
+    <div class="cart-top-section">
+      <div>
+        <input type="number" placeholder="Enter price" />
+      </div>
+      <div>
+        <select id="sortSelect">
+          <option value="ascending">Ascending</option>
+          <option value="descending">Descending</option>
+        </select>
+        <button id="cartClearButton" >Clear Cart</button>
+      </div>
+    </div>
+
+    <h1>Cart</h1>
+    <ul id="cart-list" class="card-list">
+    </ul>
+  </div>
+
+  <hr />
+
+  <div id="summary">
+    <h1>Cart Summary</h1>
+    <div>
+      <div class="summary">
+        <h4>Average product price</h4>
+        <p id="average">$0</p>
+      </div>
+      <div class="summary">
+        <h4>Total</h4>
+        <p id="total">$0</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+
+</html>
