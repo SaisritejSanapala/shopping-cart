@@ -1,0 +1,88 @@
+1. Initialize products array and cart object
+
+2. Fetch product data
+   - Define a function fetchData
+   - Use fetch to get data from '/dummy.json'
+   - Parse the response to JSON
+   - Push products into the products array
+   - Call renderProducts and renderCartProducts functions
+
+3. Render products
+   - Define a function renderProducts
+   - Access the productsList element
+   - Iterate over products
+     - Create a product card (li element)
+     - Set image, title, price, and add-to-cart button
+     - Attach click event listener to the add-to-cart button
+     - Append the card to productsList
+
+4. Add to Cart
+   - Define a function addToCart with product id as a parameter
+   - Check if the product is already in the cart
+   - If yes, increment the quantity
+   - If no, find the product in the products array
+     - Add the product to the cart with quantity 1
+   - Call renderCartProducts to update the cart display
+
+5. Render Cart
+   - Define a function renderCartProducts
+   - Access the cart-list element
+   - Clear the existing content
+   - If the cart is not empty, iterate over cart items
+     - Create a cart item card (li element)
+     - Set image, title, price x quantity, and remove button
+     - Attach click event listener to the remove button
+     - Append the card to cart-list
+   - If the cart is empty, display a message
+   - Call calculateTotalPrice and calculateAveragePrice
+
+6. Remove from Cart
+   - Define a function removeCartItem with product id as a parameter
+   - Filter out the item with the given id from the cart
+   - Call renderCartProducts to update the cart display
+
+7. Calculate Total Price
+   - Define a function calculateTotalPrice
+   - Access the total element
+   - If the cart is not empty, calculate the total price
+   - Set the total element content to the total price
+
+8. Calculate Average Price
+   - Define a function calculateAveragePrice
+   - Access the average element
+   - If there are products in the cart, calculate the average price
+   - Set the average element content to the average price, using toFixed to limit decimal places
+
+9. Sort Cart by Price
+   - Define a function sortCartByPrice with sorting order as a parameter
+   - Use sort to arrange cart items based on price and sorting order
+   - Call renderCartProducts to update the cart display
+
+10. Clear Cart
+    - Define a function clearCart
+    - Empty the cart items array
+    - Call renderCartProducts to update the cart display
+
+11. Filter Items by Price
+    - Define a function filteredItems with entered value as a parameter
+    - Parse entered value as a float
+    - If it's a valid number, filter cart items based on the condition (price x quantity <= entered value)
+    - Call renderCartProducts to update the cart display
+
+12. Event Listeners
+    - Add event listeners for input keyup (for filtering) and select change (for sorting)
+    - Attach corresponding functions to handle events
+
+13. Initial Load
+    - Call fetchData to initiate data fetching when the page loads
+
+14. HTML Structure
+    - Create an HTML structure with sections for products, cart, and summary
+    - Include input, select, and button elements for filtering, sorting, and clearing cart
+    - Add placeholders and IDs for dynamic content
+
+15. CSS Styling
+    - Use CSS to style the page and make it visually appealing
+
+16. Include JavaScript
+    - Include the JavaScript file (index.js) in the HTML file
