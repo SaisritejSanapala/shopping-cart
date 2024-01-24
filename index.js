@@ -97,7 +97,7 @@ function renderCartProducts() {
 
 
 function fetchData() {
-    fetch('/dummy.json')
+    fetch('./dummy.json')
         .then(response => response.json())
         .then(data => {
             products.push(...data.products);
